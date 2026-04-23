@@ -1,3 +1,47 @@
+.mod-tlacitko {
+  background: rgba(128, 128, 128, 0.1);
+  border: 1px solid var(--gray-200);
+  color: var(--body-font-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin: 5px;
+}
+
+/* Kontejner pro video */
+.video-light, .video-dark {
+    width: 100%;
+    /* Moderní způsob nastavení poměru stran */
+    aspect-ratio: 16 / 9; 
+    margin-bottom: 20px;
+}
+
+/* Samotné iframe musí vyplnit celý kontejner */
+.video-light iframe, .video-dark iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* --- ZÁKLADNÍ NASTAVENÍ --- */
+.video-dark { display: none; border: 1px solid white}
+.video-light { display: block; border: 1px solid black }
+
+/* --- 1. REAKCE NA SYSTÉMOVÉ NASTAVENÍ (Auto mode) --- */
+@media (prefers-color-scheme: dark) {
+    .video-light { display: none; }
+    .video-dark { display: block; }
+}
+
+.video{
+height: 480px;
+  width: 100%;
+}
+
 /*
   You can add custom styles here.
   It could be plugins:
